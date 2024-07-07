@@ -1,0 +1,239 @@
+/* Creating variables for color and background-color */
+:root{
+    --coral: #f0390f;
+    --white: #fff;
+    --black : #000;
+    --black1: #4d4d4d;
+    --purple: #3e0bce;
+}
+
+
+/* GLobal Class */
+.container{
+    width: 80%;
+    margin:40px auto;
+}
+
+.title{
+    margin: 100px auto;
+    text-align: center;
+}
+.title > h3{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.title > p{
+   color: var(--black1);
+   font-size: 1.2rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Home Section */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 5%;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.nav__list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.nav__list li{
+  padding-right: 37px;
+}
+
+.nav__list li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    padding: 10px 15px;
+}
+.nav__list li:hover a{
+    transition: 0.2s;
+    color: var(--white);
+    background-color: var(--coral);
+    border-radius: 5px;
+}
+.hero__section{
+    display: flex;
+    justify-content: space-between;
+}
+.left__col{
+    flex-basis: 20%;
+}
+.right__col{
+    flex-basis: 65%;
+}
+.right__col img{
+    /* width: 100%; */
+    max-width: 100%;
+    height: auto;
+}
+.hero__title h1{
+    font-size: 5rem;
+    padding-top: 2rem;
+}
+.hero__title h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: .8rem;
+}
+
+/* ------------- Skating Section ------------- */
+
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    flex-basis: 30%;
+    background-color: var(--coral);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.card img{
+    padding-top: .7rem;
+ }
+ .card .card__title{
+    padding: 1.8rem 0;
+ }
+ .card__title h3{
+    font-size: 1.6rem;
+    color: var(--white);
+ }
+ .card__desc{
+    color: var(--white);
+    padding-bottom: 1.4rem;
+    text-align: center;
+    font-size: 1rem;
+ }
+ .cardPurple{
+    background-color: var(--purple) !important;
+ }
+ .card:hover{
+    transition: 0.3s;
+    transform: translateY(-20px);
+ }
+
+/* skating__video__image */
+.skating__video__image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.skating__video__image figure{
+    margin: auto 0;
+    text-align: center;
+}
+
+.imgMargin{
+    margin: 2rem 0;
+}
+
+.shop__container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shopeImage{
+    flex-basis: 50%;
+}
+.shopeImage img{
+      width: 100%;
+}
+
+.shopText{
+    flex-basis: 45%;
+    padding-top: 3rem;
+}
+.shopText h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3.5rem;
+}
+.shopText p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+ /* Responsive Layout */
+
+ /*
+       For Mobile
+     **************
+  */
+
+ @media only screen and (max-width: 480px)  {
+
+    /* Hero Section */
+    .hero__section{
+        flex-direction: column;
+    }
+    .right__col img{
+        margin-top: 3rem;
+    }
+    .title > h3{
+        font-size: 2rem;
+    }
+
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        margin-bottom: 1.8rem;
+    }
+  }
+
+ /*
+       For Tablet
+     **************
+  */
+@media only screen and (max-width: 768px){
+    /* Hero Section */
+    .hero__section{
+        flex-direction: column;
+    }
+    .right__col img{
+        margin-top: 3rem;
+    }
+    .title > h3{
+        font-size: 2rem;
+    }
+
+    .cards{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card{
+        flex-basis: 45%;
+        margin-bottom: 2rem;
+    }
+
+    .skating__video__image{
+        flex-direction: column;
+    }
+    .shop__container{
+       flex-direction: column;
+    }
+
+}
+
+
